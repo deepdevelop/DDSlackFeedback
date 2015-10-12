@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DDSlackFeedback"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "DDSlackFeedback allow you send text or screen capture feedback to your slack channel."
 
   s.description  = <<-DESC
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "7.0"
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/deepdevelop/DDSlackFeedback.git", :tag => "1.1.1" }
+  s.source       = { :git => "https://github.com/deepdevelop/DDSlackFeedback.git", :tag => "1.1.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
