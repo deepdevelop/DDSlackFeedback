@@ -24,8 +24,12 @@
                                                                         UITextField *textField = (UITextField *)alertController.textFields.firstObject;
                                                                         NSString *feedback = textField.text;
                                                                         
-                                                                        [[DDSlackFeedbackManager sharedManager] takeSnapShotForViewController:self
-                                                                                                                               submitFeedback:feedback];
+                                                                        NSTimeInterval delaySeconds = 1;
+                                                                        
+                                                                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                                            [[DDSlackFeedbackManager sharedManager] takeSnapShotForViewController:self
+                                                                                                                                   submitFeedback:feedback];
+                                                                        });
                                                                     }];
         
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
