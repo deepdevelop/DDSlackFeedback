@@ -21,7 +21,9 @@
         UIAlertAction *captureScreenAction = [UIAlertAction actionWithTitle:@"截屏提交"
                                                                       style:UIAlertActionStyleDefault
                                                                     handler:^(UIAlertAction *action) {
-                                                                        NSString *feedback = alertController.textFields.firstObject.text;
+                                                                        UITextField *textField = (UITextField *)alertController.textFields.firstObject;
+                                                                        NSString *feedback = textField.text;
+                                                                        
                                                                         [[DDSlackFeedbackManager sharedManager] takeSnapShotForViewController:self
                                                                                                                                submitFeedback:feedback];
                                                                     }];
@@ -30,7 +32,9 @@
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"直接提交"
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction *action) {
-                                                             NSString *feedback = alertController.textFields.firstObject.text;
+                                                             UITextField *textField = (UITextField *)alertController.textFields.firstObject;
+                                                             NSString *feedback = textField.text;
+                                                             
                                                              [[DDSlackFeedbackManager sharedManager] submitFeedback:feedback];
                                                          }];
         
