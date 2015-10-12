@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DDSlackFeedback"
-  s.version      = "1.1"
+  s.version      = "1.1.1"
   s.summary      = "DDSlackFeedback allow you send text or screen capture feedback to your slack channel."
 
   s.description  = <<-DESC
