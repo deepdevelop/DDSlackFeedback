@@ -6,7 +6,7 @@ to do is shake your device.
 ## Installation
 
 #### CocoaPods
-
+	platform :ios, '8.0'
 	pod 'DDSlackFeedback'
 
 #### Source File
